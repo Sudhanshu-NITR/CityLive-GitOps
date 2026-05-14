@@ -12,3 +12,4 @@ resources:
   - user-service/service.yml
   - frontend/deployment.yml
   - frontend/service.yml
+  - ingress.yml
