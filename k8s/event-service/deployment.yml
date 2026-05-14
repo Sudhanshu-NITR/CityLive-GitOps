@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
         - name: event-service
-          image: sudh1804/citylive-event-service:latest
+          image: sudh1804/citylive-event-service:3
           ports:
             - containerPort: 8081
