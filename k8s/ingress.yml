@@ -3,8 +3,6 @@ kind: Ingress
 metadata:
   name: citylive-ingress
   namespace: citylive-app
-  annotations:
-    nginx.ingress.kubernetes.io/rewrite-target: /
 spec:
   rules:
   - host: citylive.dev
@@ -17,7 +15,7 @@ spec:
             name: frontend
             port:
               number: 80
-      - path: /api(/|$)(.*)
+      - path: /api
         pathType: ImplementationSpecific
         backend:
           service:
