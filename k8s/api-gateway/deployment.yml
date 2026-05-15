@@ -29,6 +29,6 @@ spec:
               mountPath: /etc/config
 
       volumes:
-        - name: config-value
+        - name: config-volume
           configMap:
             name: citylive-config
