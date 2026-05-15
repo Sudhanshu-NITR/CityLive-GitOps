@@ -17,3 +17,18 @@ spec:
           image: sudh1804/citylive-api-gateway:3
           ports:
             - containerPort: 8080
+          envFrom:
+            - configMapRef: 
+                name: citylive-config
+          env:
+            - name: PORT
+              value: "8080"
+          
+          volumeMounts:
+            - name: config-volume
+              mountPath: /etc/config
+
+      volumes:
+        - name: config-value
+          configMap:
+            name: citylive-config

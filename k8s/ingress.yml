@@ -17,10 +17,11 @@ spec:
             name: frontend
             port:
               number: 80
-      - path: /api
-        pathType: Prefix
+      - path: /api(/|$)(.*)
+        pathType: ImplementationSpecific
         backend:
           service:
             name: api-gateway
             port:
               number: 80
+

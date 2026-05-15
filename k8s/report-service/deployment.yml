@@ -17,3 +17,11 @@ spec:
           image: sudh1804/citylive-report-service:3
           ports:
             - containerPort: 5000
+          envFrom:
+            - configMapRef:
+                name: citylive-config
+            - secretRef:
+                name: citylive-secrets
+          env:
+            - name: PORT
+              value: "5000"

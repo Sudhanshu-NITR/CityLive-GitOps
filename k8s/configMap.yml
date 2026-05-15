@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: citylive-config
+  namespace: citylive-app
+data:
+  # Internal Service URLs (using port 80 as defined in Service manifests)
+  USER_SERVICE_URL: "http://user-service"
+  EVENT_SERVICE_URL:  "http://event-service"
+  REPORT_SERVICE_URL: "http://report-service"
+  FRONTEND_URL: "http://frontend"
+
+
+  GEMINI_MODEL: "gemini-2.0-flash"
+  NEO4J_URI: "neo4j+s://0a5cdd88.databases.neo4j.io"
+  NEXT_PUBLIC_MAP_PROVIDER: "leaflet"
+  
+  DOCKER_GID: "972"

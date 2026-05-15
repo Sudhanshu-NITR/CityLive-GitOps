@@ -17,3 +17,9 @@ spec:
           image: sudh1804/citylive-frontend:3
           ports:
             - containerPort: 3000
+          envFrom:
+            - configMapRef: 
+                name: citylive-config
+          env:
+            - name: PORT
+              value: "3000"

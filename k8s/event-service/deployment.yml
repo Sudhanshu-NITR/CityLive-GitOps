@@ -17,3 +17,9 @@ spec:
           image: sudh1804/citylive-event-service:3
           ports:
             - containerPort: 8081
+          envFrom:
+            - configMapRef: 
+                name: citylive-config
+          env:
+            - name: PORT
+              value: "8081"
