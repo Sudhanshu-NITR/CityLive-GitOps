@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: report-service
-          image: sudh1804/citylive-report-service:5
+          image: sudh1804/citylive-report-service:6
           ports:
             - containerPort: 5000
           envFrom:

@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: sudh1804/citylive-frontend:5
+          image: sudh1804/citylive-frontend:6
           ports:
             - containerPort: 3000
           envFrom:
